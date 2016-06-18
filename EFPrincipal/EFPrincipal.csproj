@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{308DE512-1828-43EC-9548-9751F5DBF51D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EFPrincipal</RootNamespace>
+    <AssemblyName>EFPrincipal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Address.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ApplicationSetting.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ApplicationSettingType.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Client.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Company.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyAddress.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFollowedByUser.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchise.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchiseCategory.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchiseFollowedByUser.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchiseRatingsAndComment.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchiseSpecial.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchiseSpecialCategory.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchiseSpecialFile.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchiseSpecialLocation.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchiseSpecialRatingsAndComment.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchiseSpecialViewed.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchiseUser.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyFranchiseViewed.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Country.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Customer.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\C__RefactorLog.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\File.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FriendInvitation.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PermissionType.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RefreshToken.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SecurityObject.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SecurityObjectType.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShareAnythingPost.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShareAnythingPostAddress.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShareAnythingPostComment.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShareAnythingPostFile.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShareAnythingPostLike.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShareAnythingPostLink.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShareAnythingPostType.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShareAnythingReport.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShareAnythingReportSeverity.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShareAnythingReportType.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SharePostModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharePostModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SharePostModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SharePostModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharePostModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserFriendList.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserProfile.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserRole.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UsersInRole.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\webpages_Membership.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\webpages_OAuthMembership.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\webpages_Roles.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\webpages_RolesPermission.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\webpages_UsersInRoles.cs">
+      <DependentUpon>SharePostModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Model\SharePostModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SharePostModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\SharePostModel.edmx.diagram">
+      <DependentUpon>SharePostModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\SharePostModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SharePostModel.edmx</DependentUpon>
+      <LastGenOutput>SharePostModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\SharePostModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SharePostModel.edmx</DependentUpon>
+      <LastGenOutput>SharePostModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
