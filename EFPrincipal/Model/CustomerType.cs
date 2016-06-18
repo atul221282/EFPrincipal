@@ -12,30 +12,26 @@ namespace EFPrincipal.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Customer
+    public partial class CustomerType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Customer()
+        public CustomerType()
         {
             this.CustomerCustomerTypes = new HashSet<CustomerCustomerType>();
-            this.CustomerOrders = new HashSet<CustomerOrder>();
         }
     
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string MiddleName { get; set; }
-        public string LastName { get; set; }
-        public string UserGuid { get; set; }
+        public string Code { get; set; }
+        public string Description { get; set; }
         public bool IsDeleted { get; set; }
-        public System.DateTime AuditCreatedDate { get; set; }
+        public long SortOrder { get; set; }
         public string AuditCreatedBy { get; set; }
+        public System.DateTime AuditCreatedDate { get; set; }
         public System.DateTime AuditLastUpdatedDate { get; set; }
         public string AuditLastUpdatedBy { get; set; }
         public byte[] RowVersion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CustomerCustomerType> CustomerCustomerTypes { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CustomerOrder> CustomerOrders { get; set; }
     }
 }
