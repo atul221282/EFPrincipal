@@ -11,6 +11,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EFDatabase", "EFDatabase\EF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFClient", "EFClient\EFClient.csproj", "{98629433-0D66-4B8E-AF5F-6873458D7C7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPrinicipal.Core", "EFPrinicipal.Core\EFPrinicipal.Core.csproj", "{609D4BFA-2B26-454A-9A18-385C8BCF20A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{98629433-0D66-4B8E-AF5F-6873458D7C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98629433-0D66-4B8E-AF5F-6873458D7C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98629433-0D66-4B8E-AF5F-6873458D7C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{609D4BFA-2B26-454A-9A18-385C8BCF20A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609D4BFA-2B26-454A-9A18-385C8BCF20A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{609D4BFA-2B26-454A-9A18-385C8BCF20A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{609D4BFA-2B26-454A-9A18-385C8BCF20A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,23 +5,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using EFClient.Helper;
+using System.Data.Entity;
 namespace EFClient
 {
     class Program
     {
         static void Main(string[] args)
         {
+            GetCustomer();
+        }
+
+        private static void GetCustomer()
+        {
             using (var context = new EFDatabaseEntities())
             {
-                var customer = context.Customers.ToList();
-                var jsonCustomer = JsonConvert.SerializeObject(customer, Formatting.Indented,
-                new JsonSerializerSettings
-                {
-                    //PreserveReferencesHandling = PreserveReferencesHandling.Objects
-                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-                });
-
+                var customer = context.Customers.Include(m => m.CustomerOrders).ToList();
+                var jsonCustomer = customer.SerializeObject<Customer>();
                 Console.Write(jsonCustomer);
                 Console.ReadLine();
             }
